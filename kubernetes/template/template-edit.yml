@@ -174,9 +174,9 @@ spec:
 apiVersion: "apps/v1"
 kind: "ReplicaSet"
 metadata: 
-  name: "testRS"
+  name: "testrs"
   labels: 
-    app: "testRS"
+    app: "testrs"
   namespace: ""
   annotations: 
     msaez.io/x: "1258"
@@ -185,15 +185,15 @@ spec:
   replicas: 1
   selector: 
     matchLabels: 
-      app: "testRS"
+      app: "testrs"
   template: 
     metadata: 
       labels: 
-        app: "testRS"
+        app: "testrs"
     spec: 
       containers: 
         - 
-          name: "testRS"
+          name: "testrs"
           image: ""
           ports: 
             - 
@@ -211,9 +211,9 @@ spec:
 apiVersion: "v1"
 kind: "Pod"
 metadata: 
-  name: "testPOD"
+  name: "testpod"
   labels: 
-    app: "testPOD"
+    app: "testpod"
   namespace: ""
   annotations: 
     msaez.io/x: "1096"
@@ -221,7 +221,7 @@ metadata:
 spec: 
   containers: 
     - 
-      name: "testPOD"
+      name: "testpod"
       image: ""
       ports: 
         - 
@@ -246,7 +246,7 @@ spec:
 apiVersion: "apps/v1"
 kind: "StatefulSet"
 metadata: 
-  name: "testSS"
+  name: "testss"
   namespace: ""
   annotations: 
     msaez.io/x: "1249"
@@ -254,22 +254,22 @@ metadata:
 spec: 
   selector: 
     matchLabels: 
-      app: "testSS"
-  serviceName: "testSS"
+      app: "testss"
+  serviceName: "testss"
   replicas: 1
   template: 
     metadata: 
       labels: 
-        app: "testSS"
+        app: "testss"
     spec: 
       containers: 
         - 
-          name: "testSS"
+          name: "testss"
           image: ""
           ports: 
             - 
               containerPort: 80
-              name: "testSS"
+              name: "testss"
 
 
 
@@ -287,7 +287,7 @@ spec:
 apiVersion: "apps/v1"
 kind: "DaemonSet"
 metadata: 
-  name: "testDS"
+  name: "testds"
   namespace: ""
   annotations: 
     msaez.io/x: "1090"
@@ -296,16 +296,16 @@ spec:
   selector: 
     matchLabels: 
       name: ""
-      app: "testDS"
+      app: "testds"
   template: 
     metadata: 
       labels: 
         name: ""
-        app: "testDS"
+        app: "testds"
     spec: 
       containers: 
         - 
-          name: "testDS"
+          name: "testds"
           image: ""
           ports: 
             - 
@@ -316,7 +316,7 @@ spec:
 apiVersion: "apps/v1"
 kind: "DaemonSet"
 metadata: 
-  name: "testDS"
+  name: "testds"
   namespace: ""
   annotations: 
     msaez.io/x: "1090"
@@ -325,16 +325,16 @@ spec:
   selector: 
     matchLabels: 
       name: ""
-      app: "testDS"
+      app: "testds"
   template: 
     metadata: 
       labels: 
         name: ""
-        app: "testDS"
+        app: "testds"
     spec: 
       containers: 
         - 
-          name: "testDS"
+          name: "testds"
           image: ""
           ports: 
             - 

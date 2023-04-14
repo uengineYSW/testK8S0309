@@ -1,18 +1,18 @@
 
-#### Object: testHPA
+#### Object: testhpa
 #### Type: HorizontalPodAutoscaler
 
-### Cluster에 testHPA HorizontalPodAutoscaler를 생성하려면 아래의 명령어를 실행하세요.
+### Cluster에 testhpa HorizontalPodAutoscaler를 생성하려면 아래의 명령어를 실행하세요.
 
 ```
-kubectl create -f https://minio.msaez.io/labs-msaez.io/yamlStorage/testK8S0309/yang1762%40uengine.org/HorizontalPodAutoscaler/testHPA.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20230414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230414T013859Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=05009f7a0ba11bc44f0e1f23303380b66d0e5c1b3fea8ad81f79632fb9fad8e4
+kubectl create -f https://minio.msaez.io/labs-msaez.io/yamlStorage/testK8S0309/yang1762%40uengine.org/HorizontalPodAutoscaler/testhpa.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20230414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230414T020940Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=d2aa61668708096bd33159cebc76b69f9fe49d9bffd0aeeb84f19b1a66ca1799
 ```
-- Yaml 파일에 명시된 스펙으로 testHPA HorizontalPodAutoscaler를 생성합니다.
+- Yaml 파일에 명시된 스펙으로 testhpa HorizontalPodAutoscaler를 생성합니다.
 
 ```
-kubectl apply -f https://minio.msaez.io/labs-msaez.io/yamlStorage/testK8S0309/yang1762%40uengine.org/HorizontalPodAutoscaler/testHPA.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20230414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230414T013859Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=05009f7a0ba11bc44f0e1f23303380b66d0e5c1b3fea8ad81f79632fb9fad8e4
+kubectl apply -f https://minio.msaez.io/labs-msaez.io/yamlStorage/testK8S0309/yang1762%40uengine.org/HorizontalPodAutoscaler/testhpa.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minio%2F20230414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230414T020940Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&X-Amz-Signature=d2aa61668708096bd33159cebc76b69f9fe49d9bffd0aeeb84f19b1a66ca1799
 ```
-- Create가 된 상태라면 testHPA HorizontalPodAutoscaler의 수정이 이루어지고, Create가 된 상태가 아니라면 testHPA HorizontalPodAutoscaler를 Create 해주는 명령어입니다.  
+- Create가 된 상태라면 testhpa HorizontalPodAutoscaler의 수정이 이루어지고, Create가 된 상태가 아니라면 testhpa HorizontalPodAutoscaler를 Create 해주는 명령어입니다.  
 #
 
 ### Menual Scale Out 적용을 하려면 아래의 명령어를 실행하세요.
@@ -23,12 +23,12 @@ kubectl scale deploy <Deployment_name> --replicas=1
 ```
 #
 
-### testHPA HorizontalPodAutoscaler가 정상적으로 생성되었는지 확인하시려면 아래의 명령어를 실행하세요.
+### testhpa HorizontalPodAutoscaler가 정상적으로 생성되었는지 확인하시려면 아래의 명령어를 실행하세요.
 
 ```
-kubectl get HorizontalPodAutoscaler testHPA
+kubectl get HorizontalPodAutoscaler testhpa
 ```
-- testHPA HorizontalPodAutoscaler가 확인이 되신다면 정상 생성이 된 것 입니다.
+- testhpa HorizontalPodAutoscaler가 확인이 되신다면 정상 생성이 된 것 입니다.
 > HPA는 워크로드의 CPU 또는 메모리를 측정하여 작동하기 때문에 Kubernetes 에 metric server가 필수적으로 설치되어 있어야 합니다.  
 #
 
@@ -125,17 +125,17 @@ order   Deployment/order   1152%/20%   1         3         3          37m
 - kubectl get hpa 명령어로 CPU 값이 늘어난 것을 확인합니다.
 #
 
-### 생성된 testHPA HorizontalPodAutoscaler의 상세 실행 정보를 확인하시려면 아래의 명령어를 입력하세요.
+### 생성된 testhpa HorizontalPodAutoscaler의 상세 실행 정보를 확인하시려면 아래의 명령어를 입력하세요.
 
 ```
-Kubectl describe HorizontalPodAutoscaler testHPA
+Kubectl describe HorizontalPodAutoscaler testhpa
 ```
-- testHPA HorizontalPodAutoscaler의 실행 정보 상태를 확인하여 문제가 있는지 확인합니다. 
+- testhpa HorizontalPodAutoscaler의 실행 정보 상태를 확인하여 문제가 있는지 확인합니다. 
 #
 
-### testHPA HorizontalPodAutoscaler를 삭제하려면 아래의 명령어를 실행하세요.
+### testhpa HorizontalPodAutoscaler를 삭제하려면 아래의 명령어를 실행하세요.
 
 ```
-kubectl delete HorizontalPodAutoscaler testHPA
+kubectl delete HorizontalPodAutoscaler testhpa
 ```
 #
